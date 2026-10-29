@@ -1,0 +1,9 @@
+// ViewerID.H
+
+#ifndef _CLSID_NancyViewer_
+#define _CLSID_NancyViewer_
+
+DEFINE_GUID(CLSID_NancyViewer, 
+0xe83b63c0, 0x6ff5, 0x11ce, 0x99, 0x3c, 0x0, 0xaa, 0x0, 0x4a, 0xdb, 0x6c);
+
+#endif // _CLSID_NancyViewer_

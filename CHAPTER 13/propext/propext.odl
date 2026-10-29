@@ -1,0 +1,40 @@
+// propext.odl : type library source for propext.dll
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (propext.tlb).
+
+[ uuid(983D8121-7318-11CE-993C-00AA004ADB6C), version(1.0) ]
+library propext
+{
+	importlib("stdole32.tlb");
+	
+
+	//  Primary dispatch interface for CPropExt
+	
+	[ uuid(771A9DA1-731A-11CE-993C-00AA004ADB6C) ]
+	dispinterface IPropExt
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CPropExt)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CPropExt)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CPropExt
+
+	[ uuid(771A9DA0-731A-11CE-993C-00AA004ADB6C) ]
+	coclass CPropExt
+	{
+		[default] dispinterface IPropExt;
+	};
+
+	//{{AFX_APPEND_ODL}}
+};

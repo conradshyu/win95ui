@@ -1,0 +1,17 @@
+      REGEDIT4
+
+[HKEY_CLASSES_ROOT\CLSID\{771a9da0-731a-11ce-993c-00aa004adb6c}]
+    @="NancyPropSheet"
+[HKEY_CLASSES_ROOT\CLSID\{771a9da0-731a-11ce-993c-00aa004adb6c}\InprocServer32]
+    @="c:\\windows\\system\\propext.dll"
+    "ThreadingModel"="Apartment"
+
+;[HKEY_CLASSES_ROOT\.NWC]
+;   @="NWCFile"
+;[HKEY_CLASSES_ROOT\NWCFile]
+;   @="Shell Extension file"
+[HKEY_CLASSES_ROOT\*\shellex\PropertySheetHandlers]
+    @="NWCPage"
+[HKEY_CLASSES_ROOT\*\shellex\PropertySheetHandlers\NWCPage]
+    @= "{771a9da0-731a-11ce-993c-00aa004adb6c}"
+

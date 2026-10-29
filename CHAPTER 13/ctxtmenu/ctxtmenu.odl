@@ -1,0 +1,40 @@
+// ctxtmenu.odl : type library source for ctxtmenu.dll
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (ctxtmenu.tlb).
+
+[ uuid(838A4781-73DC-11CE-993C-00AA004ADB6C), version(1.0) ]
+library ctxtmenu
+{
+	importlib("stdole32.tlb");
+	
+
+	//  Primary dispatch interface for CTxtMenu
+	
+	[ uuid(5FBCD2E1-73DD-11CE-993C-00AA004ADB6C) ]
+	dispinterface ITxtMenu
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CTxtMenu)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CTxtMenu)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CTxtMenu
+
+	[ uuid(5FBCD2E0-73DD-11CE-993C-00AA004ADB6C) ]
+	coclass CTxtMenu
+	{
+		[default] dispinterface ITxtMenu;
+	};
+
+	//{{AFX_APPEND_ODL}}
+};

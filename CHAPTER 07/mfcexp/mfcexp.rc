@@ -1,0 +1,401 @@
+//Microsoft Visual C++ generated resource script.
+//
+#include "chicoapp.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "chicoapp.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""res\\mfcexp.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "\r\n"
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "#include ""afxres.rc""  \011// Standard components\r\n"
+    "\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+IDR_MFCEXPTYPE          ICON    DISCARDABLE     "res\\mfcexdoc.ico"
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\chicoapp.ico"
+IDI_BELLEVUE            ICON    DISCARDABLE     "res\\bel.ico"
+IDI_REDMOND             ICON    DISCARDABLE     "res\\red.ico"
+IDI_SEATTLE             ICON    DISCARDABLE     "res\\sea.ico"
+IDI_FORSALE             ICON    DISCARDABLE     "res\\icon1.ico"
+IDI_SELECTED            ICON    DISCARDABLE     "res\\ico00001.ico"
+IDI_SELBELL             ICON    DISCARDABLE     "res\\ico00002.ico"
+IDI_REDSEL              ICON    DISCARDABLE     "res\\ico00003.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New",                        IDM_NEW
+        MENUITEM "&Open...",                    IDM_OPEN
+        MENUITEM "&Save",                       IDM_SAVE
+        MENUITEM "Save &as...",                 IDM_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Add House...",               IDM_ADDHOUSE
+        MENUITEM "&Remove House...",            IDM_REMHOUSE
+        MENUITEM "Add &City...",                IDM_ADDCITY
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties...",              IDM_PROPERTIES
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Large Icon View",            IDM_LARGEICON
+        MENUITEM "&Small Icon View",            IDM_SMALLICON
+        MENUITEM "List &View",                  IDM_LISTVIEW
+        MENUITEM "&Details View",               IDM_REPORTVIEW
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About mfcexp...",            ID_APP_ABOUT
+    END
+END
+
+HOUSEPOPUPMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&House Properties...",        IDM_PROPERTIES
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  34, 22, 217, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About mfcexp"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,18,20
+    LTEXT           "mfcexp Version 1.0",IDC_STATIC,40,10,119,8
+    LTEXT           "Copyright \251 1995",IDC_STATIC,40,37,119,8
+    DEFPUSHBUTTON   "OK",IDOK,176,6,32,14,WS_GROUP
+    LTEXT           "by Nancy Winnick Cluts",IDC_STATIC,40,21,117,13
+END
+
+IDD_ADDHOUSE DIALOG DISCARDABLE  0, 0, 222, 127
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Add a House to the Listings"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Address:",IDC_STATIC,9,14,31,7
+    LTEXT           "City:",IDC_STATIC,9,30,29,10
+    LTEXT           "Price:",IDC_STATIC,9,46,29,10
+    LTEXT           "Bedrooms:",IDC_STATIC,9,65,38,11
+    LTEXT           "Bathrooms:",IDC_STATIC,119,65,45,7
+    EDITTEXT        IDE_ADDRESS,69,12,142,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_CITY,69,30,119,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDE_PRICE,69,47,120,12,ES_AUTOHSCROLL
+    EDITTEXT        IDE_BEDROOMS,69,62,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDE_BATHROOMS,167,63,39,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "OK",IDOK,27,99,49,14
+    PUSHBUTTON      "Cancel",IDCANCEL,104,99,49,14
+END
+
+IDD_ADDCITY DIALOG DISCARDABLE  0, 0, 186, 69
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Add a New City to the Listing"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "City:",IDC_STATIC,7,14,29,9
+    EDITTEXT        IDE_CITY,37,13,124,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "OK",IDOK,23,38,49,14
+    PUSHBUTTON      "Cancel",IDCANCEL,92,39,51,14
+END
+
+IDD_REMHOUSE DIALOG DISCARDABLE  0, 0, 186, 130
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Remove a house from the Listing"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Remove this house from the listing:",IDC_STATIC,13,12,
+                    143,10
+    LISTBOX         ID_LISTBOX,10,34,164,71,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "OK",IDOK,27,110,49,14
+    PUSHBUTTON      "Cancel",IDCANCEL,98,110,49,14
+END
+
+IDD_HOUSEPROP DIALOG DISCARDABLE  0, 0, 186, 82
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION | WS_SYSMENU
+CAPTION "House Listing"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Address:",IDC_STATIC,14,12,35,7
+    LTEXT           "City:",IDC_STATIC,14,25,31,10
+    LTEXT           "Price:",IDC_STATIC,14,41,29,7
+    LTEXT           "Bedrooms:",IDC_STATIC,14,54,35,7
+    LTEXT           "Bathrooms:",IDC_STATIC,14,67,36,9
+    EDITTEXT        IDE_ADDRESS,52,10,123,12,ES_AUTOHSCROLL
+    EDITTEXT        IDE_PRICE,52,39,94,12,ES_AUTOHSCROLL
+    EDITTEXT        IDE_BEDROOMS,52,52,29,12,ES_AUTOHSCROLL
+    EDITTEXT        IDE_BATHROOMS,52,65,30,12,ES_AUTOHSCROLL
+    COMBOBOX        IDE_CITY,52,25,124,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_AGENT DIALOG DISCARDABLE  0, 0, 186, 95
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CLIPSIBLINGS | WS_CAPTION
+CAPTION "Listing Agent"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Agent Name:",IDC_STATIC,11,19,52,11
+    LTEXT           "Phone Number:",IDC_STATIC,11,36,53,7
+    EDITTEXT        IDE_AGENTNAME,65,19,109,12,ES_AUTOHSCROLL
+    EDITTEXT        IDE_PHONE,65,33,109,12,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "MFCEXP MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "MFCEXP\0"
+            VALUE "LegalCopyright", "Copyright \251 1995\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "MFCEXP.EXE\0"
+            VALUE "ProductName", "MFCEXP Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TOOLBAR             BITMAP  DISCARDABLE     "res\\toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "mfcexp\n\nMfcexp\n\n\nMfcexp.Document\nMfcexp Document"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "mfcexp"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_ADDHOUSE            "Adds a house to the listing"
+    IDM_REMHOUSE            "Removes a house from the listing"
+    IDM_ADDCITY             "Adds a city to the listing"
+    IDM_PROPERTIES          "Displays the house properties"
+    IDM_LARGEICON           "Displays the listing in large icon view"
+    IDM_SMALLICON           "Displays the listing in small icon view"
+    IDM_LISTVIEW            "Displays the listing in list view"
+    IDM_REPORTVIEW          "Displays the listing in details view"
+    IDM_NEW                 "Creates a new listing book"
+    IDM_OPEN                "Opens an existing listing"
+    IDM_SAVE                "Saves the current listings"
+    IDM_SAVEAS              "Saves the current listings"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FORSALE             "For Sale"
+    IDS_REDMOND             "Redmond"
+    IDS_BELLEVUE            "Bellevue"
+    IDS_SEATTLE             "Seattle"
+    IDS_ADDRESS             "Address"
+    IDS_CITY                "City"
+    IDS_PRICE               "Price"
+    IDS_BEDS                "Bedrooms"
+    IDS_BATHS               "Bathrooms"
+    IDS_SELECTED            "Currently selected: "
+    IDS_NUMHOUSES           "Number of houses: "
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DIALOGFAILURE       "Creation of CD failed on call to DialogBox()"
+    IDS_STRUCTSIZE          "Invalid structure size passed to CD"
+    IDS_INITIALIZATION      "Failure initializing CD.  Possibly\n\r do to insufficient memory."
+    IDS_NOTEMPLATE          "Failure finding custom template for CD"
+    IDS_NOHINSTANCE         "Instance handle not passed to CD"
+    IDS_LOADSTRFAILURE      "Failure loading specified string"
+    IDS_FINDRESFAILURE      "Failure finding specified resource"
+    IDS_LOADRESFAILURE      "Failure loading specified resource"
+    IDS_LOCKRESFAILURE      "Failure locking specified resource"
+    IDS_MEMALLOCFAILURE     "Failure allocating memory for internal CD structure"
+    IDS_MEMLOCKFAILURE      "Failure locking memory for internal CD structure"
+    IDS_NOHOOK              "No hook function passed to CD but ENABLEHOOK\n\r was passed as a flag"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SETUPFAILURE        "Failure setting up resources for CD"
+    IDS_PARSEFAILURE        "Failure parsing strings in [devices]\n\rsection of WIN.INI"
+    IDS_RETDEFFAILURE       "PD_RETURNDEFAULT flag was set but either the \n\rhDevMode or hDevNames field was nonzero"
+    IDS_LOADDRVFAILURE      "Failure loading the printers device driver"
+    IDS_GETDEVMODEFAIL      "The printer driver failed to initialize a DEVMODE data structure"
+    IDS_INITFAILURE         "Print CD failed during initialization"
+    IDS_NODEVICES           "No printer device drivers were found"
+    IDS_NODEFAULTPRN        "No default printer was found"
+    IDS_DNDMMISMATCH        "Data in DEVMODE contradicts data in DEVNAMES"
+    IDS_CREATEICFAILURE     "Failure creating an IC"
+    IDS_PRINTERNOTFOUND     "Printer not found"
+    IDS_NOFONTS             "No fonts exist"
+    IDS_SUBCLASSFAILURE     "Failure subclassing during initialization of CD"
+    IDS_INVALIDFILENAME     "Invalide filename passed to FileOpen or FileSave"
+    IDS_BUFFERTOOSMALL      "Buffer passed to CD too small to accomodate string"
+    IDS_FILTERSTRING        "Write Files(*.WRI)|*.WRI|Word  Files(*.DOC; *.TXT)|*.doc;*.txt|"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_UNKNOWNERROR        "Unknown error."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_EXIT                "Exit ChicoApp"
+    IDM_ADDHOUSE2           "Adds a house"
+    IDM_REMHOUSE2           "Removes a house"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_ADDCITY2            "Adds a city"
+    IDM_LARGEICON2          "Large icon view"
+    IDM_SMALLICON2          "Small icon view"
+    IDM_LISTVIEW2           "List view"
+    IDM_REPORTVIEW2         "Details view"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HOUSEINFO           "House Listing"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_AGENTINFO           "Listing Agent"
+END
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\mfcexp.rc2"  // non-Microsoft Visual C++ edited resources
+
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+#include "afxres.rc"  	// Standard components
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

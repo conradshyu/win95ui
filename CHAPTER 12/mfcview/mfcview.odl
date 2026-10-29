@@ -1,0 +1,40 @@
+// mfcview.odl : type library source for mfcview.dll
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (mfcview.tlb).
+
+[ uuid(259036A1-6FF2-11CE-993C-00AA004ADB6C), version(1.0) ]
+library mfcview
+{
+	importlib("stdole32.tlb");
+	
+
+	//  Primary dispatch interface for CFileView
+	
+	[ uuid(E83B63C1-6FF5-11CE-993C-00AA004ADB6C) ]
+	dispinterface IFileView
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CFileView)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CFileView)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CFileView
+
+	[ uuid(E83B63C0-6FF5-11CE-993C-00AA004ADB6C) ]
+	coclass CFileView
+	{
+		[default] dispinterface IFileView;
+	};
+
+	//{{AFX_APPEND_ODL}}
+};

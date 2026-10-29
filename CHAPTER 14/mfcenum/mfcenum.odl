@@ -1,0 +1,95 @@
+// mfcenum.odl : type library source for mfcenum.exe
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (mfcenum.tlb).
+
+[ uuid(EF9A6941-8931-11CE-993C-00AA004ADB6C), version(1.0) ]
+library mfcenum
+{
+	importlib("stdole32.tlb");
+	
+	//  Primary dispatch interface for CMfcenumDoc
+	
+	[ uuid(EF9A6942-8931-11CE-993C-00AA004ADB6C) ]
+	dispinterface IMfcenu
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CMfcenumDoc)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CMfcenumDoc)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CMfcenumDoc
+	
+	[ uuid(EF9A6940-8931-11CE-993C-00AA004ADB6C) ]
+	coclass CMfcenumDoc
+	{
+		[default] dispinterface IMfcenu;
+	};
+
+
+	//  Primary dispatch interface for CMyList
+	
+	[ uuid(6B0628C1-8AE6-11CE-993C-00AA004ADB6C) ]
+	dispinterface IMyList
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CMyList)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CMyList)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CMyList
+
+	[ uuid(6B0628C0-8AE6-11CE-993C-00AA004ADB6C) ]
+	coclass CMyList
+	{
+		[default] dispinterface IMyList;
+	};
+
+
+	//  Primary dispatch interface for CMyTree
+	
+	[ uuid(6B0628C3-8AE6-11CE-993C-00AA004ADB6C) ]
+	dispinterface IMyTree
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CMyTree)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CMyTree)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CMyTree
+
+	[ uuid(6B0628C2-8AE6-11CE-993C-00AA004ADB6C) ]
+	coclass CMyTree
+	{
+		[default] dispinterface IMyTree;
+	};
+
+	//{{AFX_APPEND_ODL}}
+};

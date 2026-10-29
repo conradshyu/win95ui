@@ -1,0 +1,17 @@
+REGEDIT4
+
+[HKEY_CLASSES_ROOT\CLSID\{5fbcd2e0-73dd-11ce-993c-00aa004adb6c}]
+    @="Sample Context Menu"
+[HKEY_CLASSES_ROOT\CLSID\{5fbcd2e0-73dd-11ce-993c-00aa004adb6c}\InprocServer32]
+    @="c:\\windows\\system\\ctxtmenu.dll"
+"ThreadingModel"="Apartment"
+
+;[HKEY_CLASSES_ROOT\.NWC]
+;   @="NWCFile"
+;[HKEY_CLASSES_ROOT\NWCFile]
+;   @="Shell Extension file"
+[HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers]
+   @="NWCMenu"
+[HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\NWCMenu]
+   @="{5fbcd2e0-73dd-11ce-993c-00aa004adb6c}"
+

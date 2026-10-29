@@ -1,0 +1,10 @@
+; propext.def : Declares the module parameters for the DLL.
+
+LIBRARY      PROPEXT
+DESCRIPTION  'PROPEXT Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here
+	DllCanUnloadNow
+	DllGetClassObject
+	DllRegisterServer

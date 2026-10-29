@@ -1,0 +1,10 @@
+; ctxtmenu.def : Declares the module parameters for the DLL.
+
+LIBRARY      CTXTMENU
+DESCRIPTION  'CTXTMENU Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here
+	DllCanUnloadNow
+	DllGetClassObject
+	DllRegisterServer
